@@ -4,6 +4,7 @@
       <meta name="viewport" content="width=device-width, initial-scale=1">
       <title>Hi, I'm Renee.</title>
       <link href="resources/chalk.css" rel="stylesheet"/>
+		<link href="https://netdna.bootstrapcdn.com/font-awesome/3.2.1/css/font-awesome.css" rel="stylesheet"/>
 <style>
 /* Renee's typical basic universal reset */
 * { padding: 0px; margin: 0px; box-sizing: border-box; }
@@ -14,7 +15,7 @@ body { font-family: Georgia, serif; height: 100%; font-color: #eee; }
 .centroid td { vertical-align: middle; text-align: center; }
 .centroid section { margin-top: 10px; }
 .centroid h1 { font-family: TT2020, monospace; font-size: 2.75em; font-weight: bold; }
-button { border: 1px solid #eee; color: #eee; background: none; font: inherit; padding: 5px 10px; margin-bottom: 2px; display: inline-block; }
+button { border: 1px solid #eee; color: #eee; background: none; font: inherit; padding: 5px 10px; margin-bottom: 4px; display: inline-block; }
 /*button:hover, button:active, button:focus { background: #000; color: #fff; box-shadow: inset 0px 0px 0px 1px #fff; cursor: pointer; }*/
 button:hover, button:active, button:focus { background: #eee; border-color: #eee; color: #333; cursor: pointer; }
 button:disabled { border-color: #888; color: #888; background: none; cursor: default; }
@@ -29,7 +30,15 @@ button:disabled { border-color: #888; color: #888; background: none; cursor: def
                   <p>I do cool stuff sometimes.</p>
                </header>
                <section>
-                  <p><!--<button disabled>Music</button> --><button onclick="window.location.href = 'https://github.com/reneeverly/'">GitHub</button><!-- <button disabled>Blog</button> <button disabled>R&eacute;sum&eacute;</button>--></p>
+                  <p>
+							<button onclick="window.location.href = 'https://github.com/reneeverly/'"><i class="icon-github"></i>&nbsp;GitHub</button>
+							<button disabled><i class="icon-file"></i>&nbsp;R&eacute;sum&eacute;</button>
+						</p>
+						<p style="margin-bottom: 4px;">&mdash;</p>
+						<p>
+							<button onclick="window.location.href = 'https://reneeverly.tumblr.com/'"><i class="icon-camera-retro"></i>&nbsp;Photography</button>
+							<!--<button disabled><i class="icon-music"></i>&nbsp;Music</button>-->
+						</p>
                </section>
             </td>
          </tr>
