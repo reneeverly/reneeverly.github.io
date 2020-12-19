@@ -6,6 +6,7 @@
 
 /* Layout */
 body, html { height: 100%; width: 100%; margin: 0px; padding: 0px; }
+body { font-size: 1em; }
 .centerFlex {
    align-items: center;
    display: flex;
@@ -21,6 +22,7 @@ a { color: #99ffff; }
 /* non-mobile background images */
 @media screen and (min-width: 1328px) {
    .backgroundy { background-image: url(chalk_1106.jpg) }
+   body { font-size: 1.25em; }
 }
 @media screen and (min-width: 1965px) {
    .backgroundy { background-image: url(chalk.jpg) }

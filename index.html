@@ -2,7 +2,7 @@
 <html>
    <head>
       <meta name="viewport" content="width=device-width, initial-scale=1">
-      <title>Hi, I'm Renee.</title>
+      <title>Hi, I'm Renee. (Creativity Homepage)</title>
       <link href="resources/chalk.css" rel="stylesheet"/>
 		<link href="https://netdna.bootstrapcdn.com/font-awesome/3.2.1/css/font-awesome.css" rel="stylesheet"/>
 <style>
@@ -13,12 +13,11 @@ html { height: 100%; }
 body { font-family: Georgia, serif; height: 100%; font-color: #eee; }
 .centroid { width: 100%; height: 100%; /*background-color: rgba(200, 200, 200, 0.75);*/ }
 .centroid td { vertical-align: middle; text-align: center; }
-.centroid section { margin-top: 10px; }
+.centroid section { margin-top: 0.6em; }
 .centroid h1 { font-family: TT2020, monospace; font-size: 2.75em; font-weight: bold; }
-button { border: 1px solid #eee; color: #eee; background: none; font: inherit; padding: 5px 10px; margin-bottom: 4px; display: inline-block; }
+a.button { border: 1px solid #eee; color: #eee; background: none; font: inherit; padding: 0.3em 0.6em; margin-bottom: 0.25em; display: inline-block; }
 /*button:hover, button:active, button:focus { background: #000; color: #fff; box-shadow: inset 0px 0px 0px 1px #fff; cursor: pointer; }*/
-button:hover, button:active, button:focus { background: #eee; border-color: #eee; color: #333; cursor: pointer; }
-button:disabled { border-color: #888; color: #888; background: none; cursor: default; }
+a.button:hover, button:active, button:focus { background: #eee; border-color: #eee; color: #333; cursor: pointer; }
 </style>
    </head>
    <body class="backgroundy">
@@ -27,18 +26,15 @@ button:disabled { border-color: #888; color: #888; background: none; cursor: def
             <td>
                <header>
                   <h1>Hi, I'm Ren&eacute;e.</h1>
-                  <p>I do cool stuff sometimes.</p>
+                  <p>I do creative stuff sometimes.</p>
                </header>
                <section>
-                  <p>
-							<button onclick="window.location.href = 'https://github.com/reneeverly/'"><i class="icon-github"></i>&nbsp;GitHub</button>
-							<button disabled><i class="icon-file"></i>&nbsp;R&eacute;sum&eacute;</button>
-						</p>
-						<p style="margin-bottom: 4px;">&mdash;</p>
-						<p>
-							<button onclick="window.location.href = 'https://reneeverly.tumblr.com/'"><i class="icon-camera-retro"></i>&nbsp;Photography</button>
+		  <p>
+		     <a class="button" href="https://reneeverly.tumblr.com/"><i class="icon-camera-retro"></i>&nbsp;Photography</a>
 							<!--<button disabled><i class="icon-music"></i>&nbsp;Music</button>-->
-						</p>
+		  </p>
+		  <p style="margin-bottom: 0.25em;">&mdash;</p>
+                  <p>I also do Computer Science stuff, <br>which you can check out at my <a href="https://nawibo.com/">other website</a>.</p>
                </section>
             </td>
          </tr>
