@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+   <head>
+      <meta charset="utf-8">
+      <meta http-equiv="X-UDA-Compatible" content="IE=edge">
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+      <title>{% if page.title %}{{ page.title | escape }} | {{ site.title | escape }}{% else %}{{ site.title | escape }}{% endif %}</title>
+      <link rel="stylesheet" href="/resources/mui.css">
+   </head>
+   <body class="muicontent">
+      <nav>
+         <ul class="toptiles">
+            <li class="two"><a href="index.html">Teaching Philosophy</a></li>
+            <li class="two"><a href="artifacts.html">Teaching Artifacts</a></li>
+            <li class="two"><a href="reflections.html">Teaching Reflections</a></li>
+         </ul>
+      </nav>
+      <article>
+         <section>
+         {{ content }}
+         </section>
+      </article>
+   </body>
+</html>
