@@ -70,6 +70,31 @@ h1 {
 
 
 /*
+ * Article page style
+ *//*
+article {
+   width: 100%;
+   max-width: 21cm;
+   margin: auto;
+   padding: 2cm;
+   background: #323;
+   position: relative;
+}
+
+@media screen and (max-width: 800px) {
+   article { padding: 8%; }
+}*/
+
+.toptiles { grid-template-columns: repeat(auto-fill, 60px); background: RGB(66, 54, 77); padding: 10px; margin: 0px; }
+
+.muicontent { background: #F2F0F4; color: #111; }
+
+article section.spanner { padding: 0px; background: #5E4C6E; }
+article section { padding: 10px; }
+
+
+
+/*
  * Road UA — новий шрифт дорожньої навігації України
  * Ліцензія CC BY-ND 4.0 — Із Зазначенням Авторства — Без Похідних 4.0 Міжнародна
  * Автор — Андрій Константинов, minttype.com
