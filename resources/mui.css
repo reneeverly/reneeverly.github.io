@@ -85,7 +85,7 @@ article {
    article { padding: 8%; }
 }*/
 
-.toptiles { grid-template-columns: repeat(auto-fill, 60px); background: RGB(66, 54, 77); padding: 10px; margin: 0px; }
+.toptiles { grid-template-columns: repeat(auto-fill, 60px) !important; background: RGB(66, 54, 77) !important; padding: 10px !important; margin: 0px !important; }
 
 .muicontent { background: #F2F0F4; color: #111; }
 
