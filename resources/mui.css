@@ -30,7 +30,7 @@ background-color: RGBA(66, 54, 77, 0.6);
 color: #eee;
 }
 .section { display: block; float: left; margin: 10px; }
-.tilecontainer, .overarch ul, .toptiles ul { display: grid; grid-template-columns: 60px 60px 60px 60px; grid-auto-rows: 60px; column-gap: 10px; row-gap: 10px; list-style-type: none; list-style: none; padding: 0px; margin: 10px; }
+.tilecontainer, .overarch ul, .toptiles ul, ul.toptiles { display: grid; grid-template-columns: 60px 60px 60px 60px; grid-auto-rows: 60px; column-gap: 10px; row-gap: 10px; list-style-type: none; list-style: none; padding: 0px; margin: 10px; }
 .tilecontainer.col6 { grid-template-columns: 60px 60px 60px 60px 60px 60px; }
 .tile, .overarch li, .toptiles li { display: table; }
 .four .tile, .four li { grid-column-end: span 4; grid-row-end: span 4; }
