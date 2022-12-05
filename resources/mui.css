@@ -37,7 +37,7 @@ color: #eee;
 .tile.four, li.four { grid-column-end: span 4 !important; grid-row-end: span 4 !important; }
 .two .tile, .two li, .tile.two, li.two { grid-column-end: span 2; grid-row-end: span 2; }
 .one .tile, .one li, .tile.one, li.one { grid-column-end: span 1; grid-row-end: span 1; }
-h2 { margin-left: 10px; margin-top: 0px; margin-bottom: 10px; line-height: 20px;}
+.overarch h2 { margin-left: 10px; margin-top: 0px; margin-bottom: 10px; line-height: 20px;}
 .h2less { padding-top: 20px; }
 p { padding: 0px; margin: 0px; }
 
@@ -90,7 +90,8 @@ article {
 .muicontent { background: #F2F0F4; color: #111; }
 
 article section.spanner { padding: 0px; background: #5E4C6E; }
-article section { padding: 10px; }
+article section { padding: 10px; max-width: 1024px; margin: auto; }
+article section p { margin-bottom: 10px; }
 
 
 
