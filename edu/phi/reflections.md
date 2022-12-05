@@ -24,4 +24,8 @@ An effective professor must be able to guide the students, and so working on thi
 
 ## Reflection 3: Metareflection on Reflection
 
+As someone who was previously in Engineering, many of the concepts we were teaching were not entirely familiar to me.  Reflection is a topic which I had initially struggled with.  Reflection in the sciences is very much results focused, while reflection in the humanities takes a broader scope.  Writing is not something that can be numerically evaluated, and evaluating the methodology is not clear cut.  On top of that, I had to teach my students to reflect.  How does one teach something that they themselves do not yet know how to effectively do?
 
+To an extent, I feel that I still have not gotten to a point where I understand reflection.  The reflections enclosed herein are my attempt at analyzing myself, but in the absense of clear guidelines I find myself second guessing everything I add.  So, if I get to a point where I can distill a reflection into some core components, then I could extend that framework to my students.  As of now, though, I simply cannot help them to the extent that I would like.
+
+One way to enhance my understanding of reflection would be to read up literature on reflection.

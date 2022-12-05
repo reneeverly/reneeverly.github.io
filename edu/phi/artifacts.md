@@ -17,7 +17,7 @@ Getting students to raise their hands can be a challenge.  Offering a pseudo-ano
 
 Related is the question of having students raise their hands.  Most students who fall into the "Not Started Yet" category are going to be very unlikely to raise their hand if you ask who hasn't started on a project yet.  The pseudo-anonymous Nearpod integration comes to the rescue again.
 
-## Artifact 2: Weekly Schedule
+## Artifact 2: Unit Schedule
 
 ![Two slides in a slide deck.  The first slide is a title slide, with the header Timeline (Reprise) and a line of sheet music.  The second slide includes a weekly timeline, showing the overarching task for each day.](res/timeline.png)
 
