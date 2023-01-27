@@ -92,6 +92,7 @@ article {
 article section.spanner { padding: 0px; background: #5E4C6E; }
 article section { padding: 10px; max-width: 1024px; margin: auto; }
 article section p { margin-bottom: 10px; }
+article section img { max-width: 100%; margin: auto; margin-bottom: 5px; display: block; }
 
 
 
