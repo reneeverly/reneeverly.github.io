@@ -1,5 +1,6 @@
 ---
 layout: muicontent
+group: edu
 ---
 
 # Teaching Artifacts

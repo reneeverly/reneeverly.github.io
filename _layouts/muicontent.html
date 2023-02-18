@@ -13,9 +13,14 @@
       </header>
       <nav>
          <ul class="toptiles">
+            {% if page.group == "edu" %}
             <li class="two"><a class="icobg leaf" href="index.html">Teaching Philosophy</a></li>
             <li class="two"><a class="icobg screen-share" href="artifacts.html">Teaching Artifacts</a></li>
             <li class="two"><a class="icobg blockquote" href="reflections.html">Teaching Reflections</a></li>
+            {% elsif page.group == "tiny-apps" %}
+            <li class="two"><a class="icobg code-dots" href="index.html">Index</a></li>
+            <li class="two"><a class="icobg needle-thread" href="circle-skirt.html">Circle Skirt Calculator</a></li>
+            {% endif %}
          </ul>
       </nav>
       <article>
