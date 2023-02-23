@@ -147,6 +147,8 @@ function calculate_circle_skirt() {
          ctx.lineTo(originx - (panel_length / unit), originy)
          console.log("LINE FROM: ", originx, originy, " LINE TO: ", originx - (panel_length / unit), originy)
          ctx.arc(originx, originy, panel_length / unit, Math.PI, Math.PI - angle_of_panel, true)
+         ctx.moveTo(originx - (adjusted_inner_radius / unit), originy)
+         ctx.arc(originx, originy, adjusted_inner_radius / unit, Math.PI, Math.PI - angle_of_panel, true)
          ctx.moveTo(originx, originy)
          ctx.lineTo(originx - (panel_length * Math.cos(angle_of_panel)) / unit, originy + (panel_length * Math.sin(angle_of_panel)) / unit)
       } else {
@@ -154,6 +156,8 @@ function calculate_circle_skirt() {
          ctx.lineTo(originx + (panel_length / unit), originy)
          console.log("LINE FROM: ", originx, originy, " LINE TO: ", originx + (panel_length / unit), originy)
          ctx.arc(originx, originy, panel_length / unit, 0, -angle_of_panel, true)
+         ctx.moveTo(originx + (adjusted_inner_radius / unit), originy)
+         ctx.arc(originx, originy, adjusted_inner_radius / unit, 0, -angle_of_panel, true)
          ctx.moveTo(originx, originy)
          ctx.lineTo(originx + (panel_length * Math.cos(angle_of_panel)) / unit, originy - (panel_length * Math.sin(angle_of_panel)) / unit)
       }
