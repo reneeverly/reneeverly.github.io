@@ -87,21 +87,30 @@ function calculate_circle_skirt() {
    if (skirt_length.value != '') {
       panel_length = (skirt_length.value * 1 + adjusted_inner_radius)
       if (angle_of_panel <= (Math.PI / 2)) {
+         // less than 90 degrees, two panels per section
          required_width = panel_length * Math.sin(angle_of_panel)
          num_panels_per_section = 2
          overflow_per_section = panel_length - panel_length * Math.cos(angle_of_panel)
-         console.log("OVERFLOW: ", overflow_per_section)
+         adjust_midpoint = 0
+      } else if (angle_of_panel > Math.PI) {
+         // more than 180 degrees, only one panel and super wide
+         required_width = panel_length * 2
+         num_panels_per_section = 1
+         overflow_per_section = panel_length
+         adjust_midpoint = 100
       } else {
+         // somwhere between 90 and 180 degrees, single panel per section
          required_width = panel_length
          num_panels_per_section = 1
          overflow_per_section = panel_length * Math.cos(Math.PI - angle_of_panel)
+         adjust_midpoint = 0
       }
          _required_width.value = required_width
          _need_width.value = required_width
 
       var unit = required_width / 200
       fabricmap.width = Math.ceil((panel_length + overflow_per_section) * Math.ceil(number_of_panels.value / num_panels_per_section) / unit)
-         _req_length.value = fabricmap.width
+         _req_length.value = fabricmap.width * unit
       let ctx = fabricmap.getContext('2d')
       ctx.fillStyle = 'white'
       ctx.fillRect(0, 0, fabricmap.width, 200)
@@ -111,7 +120,7 @@ function calculate_circle_skirt() {
       let progx = 0
       for (var i = 1; i <= (number_of_panels.value * 1); i++) {
          if (num_panels_per_section == 1) {
-            draw_panel(ctx, (panel_length * i + overflow_per_section * (i - 1)) / unit, 0, true)
+            draw_panel(ctx, (panel_length * i + overflow_per_section * (i - 1)) / unit, adjust_midpoint, true)
          } else {
             if (i % 2 == 0) {
                // special case for goes right
