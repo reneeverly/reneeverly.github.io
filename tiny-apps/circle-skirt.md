@@ -55,6 +55,11 @@ At an inner angle of <input type="text" disabled id="_resangle_degrees"/> (degre
 
 The width of a bolt of fabric tends to be in the range between 89cm and 150cm (35in and 60in). [https://en.wikipedia.org/wiki/Bolt_(cloth)](https://en.wikipedia.org/wiki/Bolt_(cloth))
 
+## (Optional) Suggested Pattern Layout
+
+This layout required fabric length of <input type="text" disabled id="_req_length"/> (cm)
+
+<canvas id="fabricmap" height="200" width="200"></canvas>
 
 <script>
 function calculate_circle_skirt() {
@@ -80,16 +85,79 @@ function calculate_circle_skirt() {
 
    // optional
    if (skirt_length.value != '') {
+      panel_length = (skirt_length.value * 1 + adjusted_inner_radius)
       if (angle_of_panel <= (Math.PI / 2)) {
-         required_width = (skirt_length.value*1 + adjusted_inner_radius) * Math.sin(angle_of_panel)
+         required_width = panel_length * Math.sin(angle_of_panel)
+         num_panels_per_section = 2
+         overflow_per_section = panel_length - panel_length * Math.cos(angle_of_panel)
+         console.log("OVERFLOW: ", overflow_per_section)
       } else {
-         required_width = (skirt_length.value * 1 + adjusted_inner_radius)
+         required_width = panel_length
+         num_panels_per_section = 1
+         overflow_per_section = panel_length * Math.cos(Math.PI - angle_of_panel)
       }
          _required_width.value = required_width
          _need_width.value = required_width
+
+      var unit = required_width / 200
+      fabricmap.width = Math.ceil((panel_length + overflow_per_section) * Math.ceil(number_of_panels.value / num_panels_per_section) / unit)
+         _req_length.value = fabricmap.width
+      let ctx = fabricmap.getContext('2d')
+      ctx.fillStyle = 'white'
+      ctx.fillRect(0, 0, fabricmap.width, 200)
+
+
+      // iterate through, filling in the panels
+      let progx = 0
+      for (var i = 1; i <= (number_of_panels.value * 1); i++) {
+         if (num_panels_per_section == 1) {
+            draw_panel(ctx, (panel_length * i + overflow_per_section * (i - 1)) / unit, 0, true)
+         } else {
+            if (i % 2 == 0) {
+               // special case for goes right
+               progx -= panel_length / unit
+               progx += overflow_per_section / unit
+               draw_panel(ctx, progx, required_width / unit, false)
+               progx += panel_length / unit
+            } else {
+               // goes right
+               progx += panel_length / unit
+               draw_panel(ctx, progx, 0, true)
+            }
+         }
+      }
    } else {
          _required_width.value = ''
          _need_width.value = ''
+         _req_length.value = ''
+
+         fabricmap.width = 200
+         let ctx = fabricmap.getContext('2d')
+         ctx.fillStyle = 'white'
+         ctx.fillRect(0, 0, 100, 100)
+   }
+
+   function draw_panel(ctx, originx, originy, orientation) {
+      console.log(ctx, originx, originy, orientation)
+      console.log(unit)
+      ctx.beginPath()
+      ctx.moveTo(originx, originy)
+      if (orientation) { // true = left
+         ctx.strokeStyle= '#000000'
+         ctx.lineTo(originx - (panel_length / unit), originy)
+         console.log("LINE FROM: ", originx, originy, " LINE TO: ", originx - (panel_length / unit), originy)
+         ctx.arc(originx, originy, panel_length / unit, Math.PI, Math.PI - angle_of_panel, true)
+         ctx.moveTo(originx, originy)
+         ctx.lineTo(originx - (panel_length * Math.cos(angle_of_panel)) / unit, originy + (panel_length * Math.sin(angle_of_panel)) / unit)
+      } else {
+         ctx.strokeStyle= '#000000'
+         ctx.lineTo(originx + (panel_length / unit), originy)
+         console.log("LINE FROM: ", originx, originy, " LINE TO: ", originx + (panel_length / unit), originy)
+         ctx.arc(originx, originy, panel_length / unit, 0, -angle_of_panel, true)
+         ctx.moveTo(originx, originy)
+         ctx.lineTo(originx + (panel_length * Math.cos(angle_of_panel)) / unit, originy - (panel_length * Math.sin(angle_of_panel)) / unit)
+      }
+      ctx.stroke()
    }
 }
 </script>
