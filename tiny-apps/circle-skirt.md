@@ -59,7 +59,7 @@ The width of a bolt of fabric tends to be in the range between 89cm and 150cm (3
 
 This layout required fabric length of <input type="text" disabled id="_req_length"/> (cm)
 
-<canvas id="fabricmap" height="200" width="200"></canvas>
+<canvas id="fabricmap" height="200" width="200" style="max-width: 100%;"></canvas>
 
 <script>
 function calculate_circle_skirt() {
