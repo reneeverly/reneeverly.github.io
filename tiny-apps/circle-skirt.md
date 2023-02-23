@@ -49,9 +49,12 @@ group: tiny-apps
 
 Cut out an inner radius of <input type="text" disabled id="_resultant"/> (cm)
 
+At an inner angle of <input type="text" disabled id="_resangle_degrees"/> (degrees)
+
 (Optional) You will need fabric which has a width of at least <input type="text" disabled id="_need_width"/> (cm)
 
 The width of a bolt of fabric tends to be in the range between 89cm and 150cm (35in and 60in). [https://en.wikipedia.org/wiki/Bolt_(cloth)](https://en.wikipedia.org/wiki/Bolt_(cloth))
+
 
 <script>
 function calculate_circle_skirt() {
@@ -72,10 +75,16 @@ function calculate_circle_skirt() {
       _resultant.value = adjusted_inner_radius
    angle_of_panel = (1 / skirt_fullness.value) * 2 * Math.PI / number_of_panels.value
       _angle_of_panel.value = angle_of_panel
+      //_resangle.value = angle_of_panel
+      _resangle_degrees.value = + (angle_of_panel * (180/Math.PI)).toFixed(4)
 
    // optional
    if (skirt_length.value != '') {
-      required_width = (skirt_length.value*1 + adjusted_inner_radius) * Math.sin(angle_of_panel)
+      if (angle_of_panel <= (Math.PI / 2)) {
+         required_width = (skirt_length.value*1 + adjusted_inner_radius) * Math.sin(angle_of_panel)
+      } else {
+         required_width = (skirt_length.value * 1 + adjusted_inner_radius)
+      }
          _required_width.value = required_width
          _need_width.value = required_width
    } else {
