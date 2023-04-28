@@ -5,7 +5,7 @@ group: tiny-apps
 
 # Circle Skirt Calculator
 
-
+Note: If you are making a circle skirt with an elastic waistband, you might want to increase the waist circumference a bit.  Same caveat if you are making a circle skirt without a placket.
 
 ## Parameters
 
