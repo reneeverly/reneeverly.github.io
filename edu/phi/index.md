@@ -1,20 +1,60 @@
 ---
 layout: muicontent
 group: edu
+title: Teaching Philosophy
+index: 0
 ---
+# Teaching Philosophy (Under Construction / Rough Draft, 2024 edition)
 
-# Checklist
-This document is a work in progress.
+Getting students involved and invested in their coursework is critical as we transition to a world dominated by algorithmically curated distractions.
 
-The teaching portfolio must be 1-2 pages, grounded in composition theory and should include practical examples of how my philosophy is implemented.
+Dryer notes that that writing is not "'natural' in the way that speech is" [1].
 
-Checklist:
-* [ ] At least three teaching artifacts
-  * [x] Artifact 1
-  * [x] Artifact 2
-  * [ ] Artifact 3
-* [ ] Explained the artifacts and how they helped students learn
+Writing Transfer is soemthing we also want to bring in - Teaching for Tranfser.
 
+1. Dryer, D. B. (2015). Writing is not Natural. In L. Adler-Kassner, E. Wardle (Eds.), <i>Naming What We Know: Threshold Concepts of Writing Studies</i> (pp. 27-29). Utah State University Press.
+
+
+## Components for Teaching Philosophy and Portfolio
+The teaching portfolio is an opportunity to showcase how you’ve grown as a teacher as well
+as reflect on ways you’d like to continue to grow. The teaching portfolio is both a beginning
+and a capstone. It’s the final project of ENGL 600, but it’s also a document that you can build
+on throughout your career as a teacher.
+### Artifacts
+Teaching artifacts are materials that you have created yourself in the
+course of teaching ENGL 103. These may include things like
+handouts, videos, PowerPoints, visual aids, assignment explanations,
+and so on. Artifacts should be included to demonstrate how you met
+teaching goals in the classroom.
+* [x] Artifact 1: APA Citation Activity
+* [ ] Artifact 2: Bell-Ringer Word Cloud Activity
+* [ ] Artifact 3: Topic Generation Activity
+
+### Reflections
+You will be asked regularly to reflect on your teaching throughout
+ENGL 600. Include in your portfolio some of your most interesting
+reflections: ones that were transformative to you or ones that you’ve
+totally shifted your thinking on. You can use these prior reflections as
+a reference in your Reflection Overview, a summation of what
+you’ve learned about teaching this semester.
+* [x] Reflection 1 (2023)
+* [x] Reflection 2 (2023)
+* [x] Reflection 3 (2023)
+
+Note for self: We should write a new reflection focusing on our second year of teaching and the lessons learned beyond the initial ones - refining out methodology.
+
+### Philosophy
+The teaching philosophy is a 1-2 page document that explains what is
+important to you as a teacher and how you implement these ideas in
+practice. Your philosophy for ENGL 600 should be grounded in
+composition theory (reference some reading from the semester) and
+should include examples of your philosophy in action (explain
+activities that demonstrate your philosophy in the classroom).
+Teaching philosophies are common in academia, and you’ll likely be
+asked for yours several times in your career. Consider this document
+a starting point that you can continue to build on.
+
+<!--
 # Teaching Philosophy
 
 Composition has historically sat as the terrifying gatekeeper of academia (Matsuda, 2006, p. 638).  It "provided a continuing way to separate the unpredestined from those who belong [...] by encouraging them to leave school, or more vaguely, by convincing large numbers of native speakers and otherwise accomplished citizens that they are 'not good at English'," (Matsuda, 2006, p. 638).  This concept is horrifying to think about as an educator, and the core of my philosophy for teaching is to subvert that entirely.  I strive to ensure that the barriers to entry are as low as they can go, to support students who may have difficulty engaging in traditional means by opening new avenues for engagement, and to clearly outline my expectations and how they can achieve them.
@@ -27,4 +67,4 @@ With my background in Engineering, I am very familiar with the Accrediation Boar
 
 * Adler-Kassner, L., Wardle, E. (2015).  <i>Naming What We Know: Threshold Concepts of Writing Studies</i>. Utah State University Press.
 * Matsuda, P. K. (2006). The Myth of Linguistic Homogeneity in U.S. College Composition. <i>College English</i>, 68(6), 637–651. [https://doi.org/10.2307/25472180](https://doi.org/10.2307/25472180)
-
+-->

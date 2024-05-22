@@ -1,6 +1,8 @@
 ---
 layout: muicontent
 group: edu
+title: Teaching Reflections
+index: 2
 ---
 
 # Teaching Reflections

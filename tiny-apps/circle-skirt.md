@@ -1,6 +1,8 @@
 ---
 layout: muicontent
 group: tiny-apps
+title: Circle Skirt Calculator
+index: 1
 ---
 
 # Circle Skirt Calculator

@@ -1,6 +1,8 @@
 ---
 layout: muicontent
 group: tiny-apps
+title: Tiny Javascript Apps
+index: 0
 ---
 
 # Tiny Javascript Apps
