@@ -15,15 +15,15 @@ body { font-size: 1em; }
    font-family: sans-serif;
 }
 /* Style */
-.backgroundy { background-image: url(chalk_747.jpg); background-repeat: no-repeat; background-size: cover; background-position: center; }
+.backgroundy { background-image: url(chalk_747.avif); background-repeat: no-repeat; background-size: cover; background-position: center; }
 body { background: #444044; color: #eee; }
 a { color: #99ffff; }
 .centerFlex h1 { font-family: TT2020, monospace; font-size: 4em; margin: 0px; font-weight: normal; }
 /* non-mobile background images */
 @media screen and (min-width: 1328px) {
-   .backgroundy { background-image: url(chalk_1106.jpg) }
+   .backgroundy { background-image: url(chalk_1106.avif) }
    body { font-size: 1.25em; }
 }
 @media screen and (min-width: 1965px) {
-   .backgroundy { background-image: url(chalk.jpg) }
+   .backgroundy { background-image: url(chalk.avif) }
 }
