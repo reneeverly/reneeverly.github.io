@@ -47,8 +47,20 @@ header a {
 .use-tiles h2 { margin-top: 15px; margin-bottom: 15px; }
 .use-tiles ul { list-style: none; margin: 0px; padding: 0px; }
 .use-tiles li { display: inline-block; padding: 3px; }
-.use-tiles li a { height: 120px; width: 120px; background-color: #76608a; vertical-align: bottom; display: table-cell; padding: 10px; color: #fefefe; text-decoration: none; text-shadow: 1px 1px 0px #594969, 1px -1px 0px #594969, -1px 1px 0px #594969, -1px -1px 0px #594969, 0px 1px 0px #594969, 1px 0px 0px #594969, 0px -1px 0px #594969, -1px 0px 0px #594969/*, 0px 0px 5px #594969*/; }
+.use-tiles li a { height: 120px; width: 120px; background-color: #76608a; vertical-align: bottom; display: table-cell; padding: 0.5em; color: #fefefe; text-decoration: none; text-shadow: 1px 1px 0px #594969, 1px -1px 0px #594969, -1px 1px 0px #594969, -1px -1px 0px #594969, 0px 1px 0px #594969, 1px 0px 0px #594969, 0px -1px 0px #594969, -1px 0px 0px #594969/*, 0px 0px 5px #594969*/; }
 .use-tiles li a:hover, .use-tiles li a:focus, .use-tiles li a:active { background-color: #847098; color: #fff; text-decoration: underline; box-shadow: 0px 0px 0px 2px #e671b8; }
+
+/* mui content pages */
+nav {
+	background: rgb(66, 54, 77); padding: 0.5em;
+}
+nav.use-tiles ul { margin-bottom: -0.25em; } /* TODO: Fix with something better than a negative margin */
+article img { max-width: 100%; display: block; margin-bottom: 0.5em; }
+article h1 { font-size: 1.75em; }
+article section.spanner { padding: 0px; background: #5E4C6E; } /* TODO: Is this used anywhere? */
+nav a.current { box-shadow: 0px 0px 0px 2px #f2f0f4; }
+.muicontent h1, .muicontent h2, .muicontent h3, .muicontent h4, .muicontent h5, .muicontent h6 { margin: revert; }
+.muicontent { color: #111; } /* TODO: Does this have any affect? */
 
 /*
  * Road UA — новий шрифт дорожньої навігації України
