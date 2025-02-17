@@ -34,7 +34,7 @@ nav ul li a:hover, nav ul li a:focus, nav ul li a:active {
 	box-shadow: 0px 0px 0px 2px #e671b8;
 }
 
-main { max-width: 1024px; margin: auto; }
+main { max-width: 1024px; margin: auto; padding: 0.5em; }
 a { color: #d80073; }
 img { max-width: 100%; }
 
