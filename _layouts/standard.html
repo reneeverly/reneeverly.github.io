@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width,initial-scale=1">
+	<title>{{ site.title | escape }} - {{ page.title | escape }}</title>
+	<link rel="stylesheet" type="text/css" href="{{ site.baseurl }}/resources/standard.css">
+	<link rel="stylesheet" type="text/css" href="{{ site.baseurl }}/resources/icons.css">
+</head>
+<body>
+<header>
+<h1><a href="{{ site.baseurl }}/">{{ site.title | escape }}</a></h1>
+<nav>
+	<ul>
+		<li><a class="icobg books" href="{{ site.baseurl }}/about/">About</a></li>
+		<li><a class="icobg seeding" href="{{ site.baseurl }}/edu/">Teaching</a></li>
+		<li><a class="icobg camera" href="{{ site.baseurl }}/art/">Art</a></li>
+		<li><a class="icobg code-dots" href="{{ site.baseurl }}/tiny-apps/">Software</a></li>
+		<li><a class="icobg notebook" href="{{ site.baseurl }}/notes/">Notes</a></li>
+	</ul>
+</nav>
+</header>
+<main>
+{{ content }}
+</main>
+<footer></footer>
+</html>

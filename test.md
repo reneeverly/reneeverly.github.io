@@ -1,6 +1,6 @@
 ---
 title: Test Page
-layout: default
+layout: standard
 ---
-# Hi, this is just a test page.
+## Hi, this is just a test page.
 Test content

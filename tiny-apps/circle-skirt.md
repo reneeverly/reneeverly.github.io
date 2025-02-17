@@ -1,15 +1,13 @@
 ---
-layout: muicontent
-group: tiny-apps
+layout: standard
 title: Circle Skirt Calculator
-index: 1
 ---
 
-# Circle Skirt Calculator
+## Circle Skirt Calculator
 
 Note: If you are making a circle skirt with an elastic waistband, you might want to increase the waist circumference a bit.  Same caveat if you are making a circle skirt without a placket.
 
-## Parameters
+### Parameters
 
 <form>
 
@@ -27,7 +25,7 @@ Note: If you are making a circle skirt with an elastic waistband, you might want
 
 </form>
 
-## Calculations
+### Calculations
 
 `type_of_skirt_ratio = 1 / skirt_fullness //` <input type="text" disabled id="_type_of_skirt_ratio"/>
 
@@ -47,7 +45,7 @@ Note: If you are making a circle skirt with an elastic waistband, you might want
 
 `required_width = (skirt_length + adjusted_inner_radius) * sin(angle_of_panel) //` <input type="text" disabled id="_required_width"/>
 
-## Result
+### Result
 
 Cut out an inner radius of <input type="text" disabled id="_resultant"/> (cm)
 
@@ -57,7 +55,7 @@ At an inner angle of <input type="text" disabled id="_resangle_degrees"/> (degre
 
 The width of a bolt of fabric tends to be in the range between 89cm and 150cm (35in and 60in). [https://en.wikipedia.org/wiki/Bolt_(cloth)](https://en.wikipedia.org/wiki/Bolt_(cloth))
 
-## (Optional) Suggested Pattern Layout
+### (Optional) Suggested Pattern Layout
 
 This layout required fabric length of <input type="text" disabled id="_req_length"/> (cm)
 
