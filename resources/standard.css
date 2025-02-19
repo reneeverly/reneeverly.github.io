@@ -38,3 +38,6 @@ main { max-width: 1024px; margin: auto; padding: 0.5em; }
 a { color: #d80073; }
 img { max-width: 100%; }
 
+@media screen and (max-width: 41em) {
+	nav ul li a { height: 4.5em; }
+}
