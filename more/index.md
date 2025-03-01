@@ -9,24 +9,24 @@ title: More
 
 | Name | Device | Year Acquired |
 | -- | --- | -- |
-| Tasha | Toshiba HX-21 PasopiaIQ | 2022 |
+| [Tasha](/more/computers/tasha.html) | Toshiba HX-21 PasopiaIQ | 2022 |
 | Mabel &amp; Dipper | SMART Response XE | 2022 |
-| Spring | NTS Dreamwriter 325 | 2021 |
-| Newsie | Apple IIc | 2019 |
-| Forest | TRS-80 Model 100 | 2019 |
+| [Spring](/more/computers/spring.html) | NTS Dreamwriter 325 | 2021 |
+| [Newsie](/more/computers/newsie.html) | Apple IIc | 2019 |
+| [Forest](/more/computers/forest.html) | TRS-80 Model 100 | 2019 |
 
 #### 16 Bit
 
 | Name | Device | Year Acquired |
 | -- | --- | -- |
-| Merit | Apple IIGS | 2020 |
+| [Merit](/more/computers/merit.html) | Apple IIGS | 2020 |
 
 
 #### 32 Bit
 
 | Name | Device | Year Acquired |
 | -- | --- | -- |
-| Flop | Sun SPARCstation IPC | 2021 |
+| [Flop](/more/computers/flop.html) | Sun SPARCstation IPC | 2021 |
 | Addison | IBM PS/1 Consultant | 2019 |
 | Firebird | MPC ClientPro 375 | 2015 |
 
@@ -38,6 +38,6 @@ title: More
 | Mira | HP EliteDesk 705 G3 Mini | 2023 |
 | Forest-1 | Raspberry Pi 3A+ | 2021 |
 | Tower | Apple iMac 27" 20,1 | 2020 |
-| Sunshine | Sun Ultra 24 MT | 2020 |
+| [Sunshine](/more/computers/sunshine.html) | Sun Ultra 24 MT | 2020 |
 | Persistent Halcyon | HP Pavillion | 2016 |
 | Dawn | Dell Inspiron N4110 | 2012 |
