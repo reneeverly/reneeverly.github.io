@@ -9,3 +9,4 @@ A collection of notes I've taken that I refer to frequently or think might be us
 
 ## Bookmarks
 * [Alt Text as Poetry](https://alt-text-as-poetry.net/)
+* [How and Why I Stopped Buying New Laptops - Low Tech Magazine](https://solar.lowtechmagazine.com/2020/12/how-and-why-i-stopped-buying-new-laptops/)
