@@ -41,3 +41,7 @@ img { max-width: 100%; }
 @media screen and (max-width: 41em) {
 	nav ul li a { height: 4.5em; }
 }
+
+@media (prefers-color-scheme: dark) {
+	html { color: #f2f0f4; background: #040206; }
+}
