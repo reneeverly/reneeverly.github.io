@@ -44,4 +44,5 @@ img { max-width: 100%; }
 
 @media (prefers-color-scheme: dark) {
 	html { color: #f2f0f4; background: #040206; }
+	a { color: deeppink; }
 }
