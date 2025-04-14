@@ -1,0 +1,7 @@
+<article class="{{ include.tags }}">
+<header><time datetime="{{ include.date }}">{{ include.date }}</time></header>
+<section>
+{{ include.content | markdownify }}
+</section>
+<footer>Tags: {{ include.tags | replace: " ", ", " }}</footer>
+</article>

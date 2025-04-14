@@ -38,10 +38,28 @@ main { max-width: 1024px; margin: auto; padding: 0.5em; }
 a { color: #d80073; }
 img { max-width: 100%; }
 
+/* tumblelog */
+
+article header {
+	text-align: left; background: transparent; border-bottom: none;
+}
+article header, article footer { opacity: 60%; }
+article {
+	padding: 1em 0em;
+	border-bottom: 1.5pt solid #d80073;
+}
+article:first-of-type {
+	border-top: 8pt solid #d80073;
+}
+article:last-of-type {
+	border-bottom: 8pt solid #d80073;
+}
+
 @media screen and (max-width: 41em) {
 	nav ul li a { height: 4.5em; }
 }
 
 @media (prefers-color-scheme: dark) {
 	html { color: #f2f0f4; background: #040206; }
+	a { color: deeppink; }
 }
