@@ -13,9 +13,9 @@ This is why minus 1 for parent index, and minus 2 for child index
 
 {% assign pages = site.pages | sort: "url" %}
 {% for page in pages %}
-{% assign pageurl_array = page.url | split: "/" %}
-{% assign index = pageurl_array.size | minus: 2 %}
-{% if pageurl_array[index] == parent %}
+{%- assign pageurl_array = page.url | split: "/" -%}
+{%- assign index = pageurl_array.size | minus: 2 -%}
+{%- if pageurl_array[index] == parent -%}
 * [{{ page.title }}]({{ page.url }})
-{% endif %}
+{%- endif %}
 {% endfor %}
