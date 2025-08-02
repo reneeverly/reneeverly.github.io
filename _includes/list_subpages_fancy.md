@@ -13,9 +13,9 @@ This sorts direct descendents out front, then creates headers for subfolders and
 ### {{ collection.name }}
 {% endif %}
 {% for page in collection.items %}
-{% if page.url != parent_url %}
+{%- if page.url != parent_url -%}
 * [{{ page.title }}]({{ page.url }})
-{% endif %}
+{%- endif %}
 {% endfor %}
 {% endfor %}
 

@@ -1,9 +1,10 @@
 ---
-layout: default
-title: Installing MidiEditor on Debian i686
+layout: standard
+title: Installing MidiEditor on Debian i386
 ---
-## Installing MidiEditor on Debian i686
-### Qt5 Dependencies
+## Installing MidiEditor on Debian i386
+### Qt5 Build Environment without QtCreator
+The Qt Group doesn't seem to provide a 32bit linux installer, but the debian package list has everything we need.
 ```bash
 sudo apt install qt5-qmake
 sudo apt install qtbase5-dev
