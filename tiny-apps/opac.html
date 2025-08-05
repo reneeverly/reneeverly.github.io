@@ -1,0 +1,53 @@
+---
+layout: standard
+title: Online Public Access Catalog
+---
+<h2>Online Public Access Catalog</h2>
+
+<style>
+/*
+ul li { display: none; }
+.defdisplay { opacity: 0.3; }
+#fiction:checked ~ .fiction { display: block; opacity: 1; }
+#fiction:checked ~ ul li.fiction { display: list-item; opacity: 1; }
+#nonfiction:checked ~ .nonfiction { display: block; opacity: 1; }
+#nonfiction:checked ~ ul li.nonfiction { display: list-item; opacity: 1; }
+*/
+
+/* when one is checked, hide the others */
+#fiction:checked ~ table tr { display: none; }
+#nonfiction:checked ~ table tr { display: none; }
+
+#fiction:checked ~ table tr.fiction { display: table-row; }
+#nonfiction:checked ~ table tr.nonfiction { display: table-row; }
+
+td, th { border: 1px solid silver; }
+
+</style>
+
+<h3>Filters</h3>
+<p>Check a box to show <strong>only</strong> that category of book.</p>
+<input type="checkbox" id="fiction"></input><label for="fiction">Fiction</label>
+&emsp;
+<input type="checkbox" id="nonfiction"></input><label for="nonfiction">Nonfiction</label>
+
+<!--
+<div class="fiction defdisplay">
+<h4>Fiction Subfilters</h4>
+</div>
+<div class="nonfiction defdisplay">
+<h4>Nonfiction Subfilters</h4>
+</div>
+-->
+<h3>Results</h3>
+<table>
+<thead>
+<tr style="display: table-row;"><th>Type</th><th>Genre</th><th>Title</th><th>Author</th><th>Year</th></tr>
+</thead>
+<tbody>
+{% for book in site.data.bookshelf %}
+<!--<li class="{{ book["class1"] }}"><i>{{ book["Title"] | escape }}</i> ({{ book["Year of Publication"] }}), {{ book["Author(s)"] }}.</li>-->
+<tr class="{{ book["class1"] }} {{ book["class2"] }}"><td>{{ book["class1"] }}</td><td>{{ book["class2"] }}</td><td>{{ book["Title"] | escape }}</td><td>{{ book["Author(s)"] }}</td><td>{{ book["Year of Publication"] }}</td></tr>
+{% endfor %}
+</tbody>
+</table>

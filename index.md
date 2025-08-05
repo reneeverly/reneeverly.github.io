@@ -5,6 +5,13 @@ title: Homepage
 
 ## Tumblelog
 
+{% capture 2025-08-05 %}
+### Testing OPAC
+I've been kicking around the idea of properly cataloging all of the books in my collection and setting up a website to lend them out, much like a library.  I'm trying to see if jekyll can work for this purpose.  You can see the work in progress OPAC under [tiny-apps/opac](/tiny-apps/opac/).
+
+{% endcapture %}
+{% include tumble.html date="2025-08-05" tags="library" content=2025-08-05 %}
+
 {% capture 2025-04-13 %}
 ### Site Update
 Replaced homepage with a tumblelog and added an optional dark mode (set by browser/os preference).

@@ -4,6 +4,10 @@ title: More
 ---
 <style>table { border-collapse: separate; border: 1px solid grey; } td, th { border: 1px solid grey; }</style>
 ## More
+
+{% comment %}### Uncategorized Pages {% endcomment %}
+{% include list_subpages.md %}
+
 ### Computer Collection
 #### 8 Bit
 
