@@ -25,4 +25,4 @@ A collection of older projects that I keep around and even update from time to t
 
 Fairly simple JS apps that I drafted up for convenient calculators and whatnot.
 
-{% include list_subpages.md %}
+{% include list_subpages_fancy.md %}

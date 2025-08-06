@@ -1,0 +1,50 @@
+---
+layout: standard
+title: Online Public Access Catalog - Genre Tiles
+---
+<style>
+.tile-holder { margin: 0px; padding: 0px; display: flex; flex-wrap: wrap; justify-content: space-evenly; align-items: center; flex-direction: row; align-content: space-between; gap: 10px; }
+.tile { border: 1px solid silver; border-radius: 0.5em; display: inline-block; width: 310px; flex-grow: 0; flex-basis: 310px; flex-shrink: 0; box-shadow: 0px 4px 5px rgba(0,0,0,.14),0px 1px 10px rgba(0,0,0,.12),0px 2px 4px rgba(0,0,0,.2); }
+.tile .covdesc_holder { /*display: table-row;*/ }
+.tile .cover { width: 120px; height: 180px; background: silver; color: black; display: table-cell; position: relative; float: left; margin-right: 0.5em; padding: 0px 2px; box-sizing: border-box; }
+.tile .cover .author { font-size: 0.8em; }
+.tile .desc { /*display: table-cell;*/ padding: 0em 0.5em; padding-top: 0.5em; }
+
+time { opacity: 0.5; position: absolute; right: 0px; bottom: 0px; padding: 0.25em; }
+
+.status { padding: 0.25em; border-radius: 0.25em; margin: 0px; display: inline-block; }
+.available { background: green; color: white; }
+.special { background: mediumblue; color: white; }
+.checked-out{ background: red; color: white; }
+
+</style>
+
+<h2>Online Public Access Catalog - Genre Tiles</h2>
+
+{% assign classes = site.data.bookshelf | group_by_exp: "item", "item.class1" %}
+
+{% for class in classes %}
+<h3>{{ class.name | capitalize }}</h3>
+{% assign subclasses = class.items | group_by_exp: "item", "item.class2 | replace: 'historical-fiction', 'classics'" %}
+{% for subclass in subclasses %}
+<h4>{% if subclass.name != empty %}{{ subclass.name | replace: 'classics', 'Classics & Historical Fiction' | capitalize }}{% else %}General / Unclassified{% endif %}</h4>
+<ul class="tile-holder">
+{% for book in subclass.items %}
+<li class="tile"><div class="covdesc_holder"><div class="cover"><p>{{ book["Title"] | escape }}</p><p class="author">{{ book["Author(s)"] }}</p><time datetime="{{ book["Year of Publication"] }}">{{ book["Year of Publication"] }}</time></div>
+<div class="desc">
+{% if book.Status == nil %}
+<p class="status available">On Shelf</p>
+{% elsif book.Status == "On Display" %}
+<p class="status special">On Display</p>
+{% else %}
+<p class="status checked-out">Checked Out</p>
+{% endif %}
+<p>
+{{ book.Description }}
+</p>
+</div>
+</div></li>
+{% endfor %}
+</ul>
+{% endfor %}
+{% endfor %}

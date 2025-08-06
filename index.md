@@ -7,7 +7,7 @@ title: Homepage
 
 {% capture 2025-08-05 %}
 ### Testing OPAC
-I've been kicking around the idea of properly cataloging all of the books in my collection and setting up a website to lend them out, much like a library.  I'm trying to see if jekyll can work for this purpose.  You can see the work in progress OPAC under [tiny-apps/opac](/tiny-apps/opac/).
+I've been kicking around the idea of properly cataloging all of the books in my collection and setting up a website to lend them out, much like a library.  I'm trying to see if jekyll can work for this purpose.  You can see the work in progress OPAC under [tiny-apps/opac/genre-tiles.html](/tiny-apps/opac/genre-tiles.html).
 
 {% endcapture %}
 {% include tumble.html date="2025-08-05" tags="library" content=2025-08-05 %}
