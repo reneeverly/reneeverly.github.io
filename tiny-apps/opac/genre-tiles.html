@@ -17,20 +17,41 @@ time { opacity: 0.5; position: absolute; right: 0px; bottom: 0px; padding: 0.25e
 .special { background: mediumblue; color: white; }
 .checked-out{ background: red; color: white; }
 
-h2, h3, h4 { border-bottom: 1px solid; }
+h2, h3, h4 { border-bottom: 1px solid; font-size: 1.5em; }
+h4 { font-weight: normal; }
+
+#return_to_top { position: fixed; right: 0px; bottom: 0px; }
+#return_to_top a { padding: 10px; background: silver; color: black; width: 1em; display: block; text-align: center; text-decoration: none; }
 
 </style>
 
-<h2>Online Public Access Catalog - Genre Tiles</h2>
-<p>Note that years might not be accurate.  When I originally created my spreadsheet of books, I used the most recent copyright date rather than the first.</p>
-
 {% assign classes = site.data.bookshelf | group_by_exp: "item", "item.class1" %}
 
+<div id="return_to_top"><a href="#top" alt="Return to the top of the webpage.">&uarr;</a></div>
+
+<h2 id="top">Online Public Access Catalog - Genre Tiles</h2>
+<p>Note that years might not be accurate.  When I originally created my spreadsheet of books, I used the most recent copyright date rather than the first.</p>
+<p>Books listed as <span class="status available">On Shelf</span> are available for checkout, <span class="status special">On Display</span> are reference texts that may be checked out by special request, and <span class="status checked-out">Checked Out</span> are currently checked out by another patron.</p>
+<p>There are {{ site.data.bookshelf | size }} books in the collection, {{ site.data.bookshelf | where_exp: "item", "item.Description != nil" | size }} of which have been given descriptions and colorful covers.</p>
+<p>The current incarnation of this OPAC is written in Jekyll/Liquid, with no Javascript controlling the UI (as of yet).</p>
+<p>Table of contents:</p>
+<ul>
 {% for class in classes %}
-<h3>{{ class.name | capitalize }}</h3>
+<li><b>{{ class.name | replace: 'fiction nonfiction', 'Analysis of fictional works' | capitalize }}</b><ul>
 {% assign subclasses = class.items | group_by_exp: "item", "item.class2 | replace: 'historical-fiction', 'classics'" %}
 {% for subclass in subclasses %}
-<h4>{% if subclass.name != empty %}{{ subclass.name | replace: 'classics', 'Classics & Historical Fiction' | capitalize }}{% else %}General / Unclassified{% endif %}</h4>
+<li{% if subclass.name != empty %}{% assign subclass_name = subclass.name | replace: 'classics', 'Classics & Historical Fiction' | capitalize %}{% else %}{% assign subclass_name = "General / Unclassified" %}{% endif %}><a href="#{{ class.name }} {{ subclass_name }}">{{ subclass_name }}</a> ({{ subclass.items | size }})</li>
+{% endfor %}
+</ul></li>
+{% endfor %}
+</ul>
+
+
+{% for class in classes %}
+<h3>{{ class.name | replace: 'fiction nonfiction', 'Nonfiction that focuses on a fictional work' | capitalize }}</h3>
+{% assign subclasses = class.items | group_by_exp: "item", "item.class2 | replace: 'historical-fiction', 'classics'" %}
+{% for subclass in subclasses %}
+<h4{% if subclass.name != empty %}{% assign subclass_name = subclass.name | replace: 'classics', 'Classics & Historical Fiction' | capitalize %}{% else %}{% assign subclass_name = "General / Unclassified" %}{% endif %} id="{{ class.name }} {{ subclass_name }}">{{ subclass_name }}</h4>
 <ul class="tile-holder">
 {% for book in subclass.items %}
 <li class="tile"><div class="covdesc_holder">
@@ -46,7 +67,7 @@ h2, h3, h4 { border-bottom: 1px solid; }
 <p class="status checked-out">Checked Out</p>
 {% endif %}
 <p>
-{{ book.Description }}
+{{ book.Description | escape }}
 </p>
 </div>
 </div></li>
