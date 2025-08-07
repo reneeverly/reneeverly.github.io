@@ -17,9 +17,12 @@ time { opacity: 0.5; position: absolute; right: 0px; bottom: 0px; padding: 0.25e
 .special { background: mediumblue; color: white; }
 .checked-out{ background: red; color: white; }
 
+h2, h3, h4 { border-bottom: 1px solid; }
+
 </style>
 
 <h2>Online Public Access Catalog - Genre Tiles</h2>
+<p>Note that years might not be accurate.  When I originally created my spreadsheet of books, I used the most recent copyright date rather than the first.</p>
 
 {% assign classes = site.data.bookshelf | group_by_exp: "item", "item.class1" %}
 
@@ -30,7 +33,10 @@ time { opacity: 0.5; position: absolute; right: 0px; bottom: 0px; padding: 0.25e
 <h4>{% if subclass.name != empty %}{{ subclass.name | replace: 'classics', 'Classics & Historical Fiction' | capitalize }}{% else %}General / Unclassified{% endif %}</h4>
 <ul class="tile-holder">
 {% for book in subclass.items %}
-<li class="tile"><div class="covdesc_holder"><div class="cover"><p>{{ book["Title"] | escape }}</p><p class="author">{{ book["Author(s)"] }}</p><time datetime="{{ book["Year of Publication"] }}">{{ book["Year of Publication"] }}</time></div>
+<li class="tile"><div class="covdesc_holder">
+<div class="cover" style="{% if book.Background != nil %}background: {{ book.Background }};{% endif %}{% if book.Foreground != nil %}color: {{ book.Foreground }};{% endif %}">
+<p>{{ book["Title"] | escape }}</p><p class="author">{{ book["Author(s)"] }}</p><time datetime="{{ book["Year of Publication"] }}">{{ book["Year of Publication"] }}</time>
+</div>
 <div class="desc">
 {% if book.Status == nil %}
 <p class="status available">On Shelf</p>
