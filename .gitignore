@@ -27,3 +27,5 @@ tags
 _site
 
 .DS_Store
+
+_secrets

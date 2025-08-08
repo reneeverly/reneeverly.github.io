@@ -67,7 +67,14 @@ h4 { font-weight: normal; }
 <p class="status checked-out">Checked Out</p>
 {% endif %}
 <p>
+{% if book.Description != nil %}
 {{ book.Description | escape }}
+{% else %}
+{% assign shortisbn = book['ISBN-13 (or ISBN-10)'] | replace: '-', nil %}
+{% assign shortisbn_match = site.data.isbn_desc | find: "isbn", shortisbn %}
+{% comment %} the replace followed by strip_html is to remove the image tag {% endcomment %}
+{{ shortisbn_match.description | replace: '&lt;', '<' | replace: '&gt;', '>' | strip_html | truncatewords: 90 }}
+{% endif %}
 </p>
 </div>
 </div></li>

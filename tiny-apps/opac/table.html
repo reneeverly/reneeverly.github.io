@@ -42,12 +42,12 @@ td, th { border: 1px solid silver; }
 <h3>Results</h3>
 <table>
 <thead>
-<tr style="display: table-row;"><th>Type</th><th>Genre</th><th>Title</th><th>Author</th><th>Year</th></tr>
+<tr style="display: table-row;"><th>Type</th><th>Genre</th><th>Title</th><th>Author</th><th>Year</th><th>ISBN</th></tr>
 </thead>
 <tbody>
 {% for book in site.data.bookshelf %}
 <!--<li class="{{ book["class1"] }}"><i>{{ book["Title"] | escape }}</i> ({{ book["Year of Publication"] }}), {{ book["Author(s)"] }}.</li>-->
-<tr class="{{ book["class1"] }} {{ book["class2"] }}"><td>{{ book["class1"] }}</td><td>{{ book["class2"] }}</td><td>{{ book["Title"] | escape }}</td><td>{{ book["Author(s)"] }}</td><td>{{ book["Year of Publication"] }}</td></tr>
+<tr class="{{ book["class1"] }} {{ book["class2"] }}"><td>{{ book["class1"] }}</td><td>{{ book["class2"] }}</td><td>{{ book["Title"] | escape }}</td><td>{{ book["Author(s)"] }}</td><td>{{ book["Year of Publication"] }}</td><td>{{ book["ISBN-13 (or ISBN-10)"] | replace: '-', nil }}</tr>
 {% endfor %}
 </tbody>
 </table>
