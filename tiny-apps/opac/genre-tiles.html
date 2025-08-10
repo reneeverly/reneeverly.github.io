@@ -71,7 +71,10 @@ h4 { font-weight: normal; }
 {{ book.Description | escape }}
 {% else %}
 {% assign shortisbn = book['ISBN-13 (or ISBN-10)'] | replace: '-', nil %}
+<!-- {{ shortisbn }} -->
 {% assign shortisbn_match = site.data.isbn_desc | find: "isbn", shortisbn %}
+<!-- {{ shortisbn_match }} -->
+<!-- {{ shortisbn_match.description }} -->
 {% comment %} the replace followed by strip_html is to remove the image tag {% endcomment %}
 {{ shortisbn_match.description | replace: '&lt;', '<' | replace: '&gt;', '>' | strip_html | truncatewords: 90 }}
 {% endif %}
