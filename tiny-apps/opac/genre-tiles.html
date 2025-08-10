@@ -72,7 +72,7 @@ h4 { font-weight: normal; }
 {% else %}
 {% assign shortisbn = book['ISBN-13 (or ISBN-10)'] | replace: '-', nil %}
 <!-- {{ shortisbn }} -->
-{% assign shortisbn_match = site.data.isbn_desc | find: "isbn", shortisbn %}
+{% assign shortisbn_match = site.data.isbn_desc | where: "isbn", shortisbn | first %}
 <!-- {{ shortisbn_match }} -->
 <!-- {{ shortisbn_match.description }} -->
 {% comment %} the replace followed by strip_html is to remove the image tag {% endcomment %}
