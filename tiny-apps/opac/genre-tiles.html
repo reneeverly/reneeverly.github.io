@@ -54,14 +54,15 @@ h4 { font-weight: normal; }
 <h4{% if subclass.name != empty %}{% assign subclass_name = subclass.name | replace: 'classics', 'Classics & Historical Fiction' | capitalize %}{% else %}{% assign subclass_name = "General / Unclassified" %}{% endif %} id="{{ class.name }} {{ subclass_name }}">{{ subclass_name }}</h4>
 <ul class="tile-holder">
 {% for book in subclass.items %}
+{% assign book_circ = site.data.circ | where: 'IDtag', book.IDtag | first %}
 <li class="tile"><div class="covdesc_holder">
 <div class="cover" style="{% if book.Background != nil %}background: {{ book.Background }};{% endif %}{% if book.Foreground != nil %}color: {{ book.Foreground }};{% endif %}">
 <p>{{ book["Title"] | escape }}</p><p class="author">{{ book["Author(s)"] }}</p><time datetime="{{ book["Year of Publication"] }}">{{ book["Year of Publication"] }}</time>
 </div>
 <div class="desc">
-{% if book.Status == nil %}
+{% if book_circ.status == nil %}
 <p class="status available">On Shelf</p>
-{% elsif book.Status == "On Display" %}
+{% elsif book_circ.status == "On Display" %}
 <p class="status special">On Display</p>
 {% else %}
 <p class="status checked-out">Checked Out</p>
