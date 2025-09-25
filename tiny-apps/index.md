@@ -26,3 +26,7 @@ A collection of older projects that I keep around and even update from time to t
 Fairly simple JS apps that I drafted up for convenient calculators and whatnot.
 
 {% include list_subpages_fancy.md %}
+
+## This Website
+
+This website is hosted on GitHub Pages; you can [find the repository here](https://github.com/reneeverly/reneeverly.github.io).
