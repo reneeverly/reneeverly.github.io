@@ -1,6 +1,7 @@
 ---
 layout: standard
 title: Tips for Macromedia Flash MX 2004
+date: 2025-10-14
 ---
 ## Tips for Macromedia Flash MX 2004
 
@@ -25,3 +26,5 @@ The main issue with WMF and EMF is scaling; they're imported as a bit smaller th
 
 * Inkscape can save to FXG (Flash XML Graphics).  However, FXG is from the Adobe era.  We'll need to find a way to convert FXG to SWF or FLA. (`mxmlc` from the AIR SDK?)
   * This FXG to MXML app doesn't work under Ruffle: <https://github.com/JonDum/FXG-to-MXML-Converter/tree/master>.  Is it even needed, or can `mxmlc` operate on FXG's?  Either way, the code is quite simple and can be reimplemented in JS with minimal effort.
+  * Update 2025-10-16: AIR SDK default install results in "mxml is of an unsupported type: mxml" error.  Github issues seem to imply that Flex SDK needs to be installed?
+* <https://svg2swf.sourceforge.net/index.html> adds the interesting information that SWF does not support cubic beziers.  So importing and exporting might be lossy in both directions.
