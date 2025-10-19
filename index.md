@@ -31,6 +31,14 @@ mainless: true
 
 <!--<a href="/about/">Read Longer About Page Here</a>-->
 </main>
+<aside class="hr-above">
+<h2>Recent Blog Posts</h2>
+<ul>
+{% for post in site.posts %}
+<li><time datetime="{{ post.date }}">{{ post.date | date: "%Y-%m-%d" }}</time>&nbsp;<a href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a></li>
+{% endfor %}
+</ul>
+</aside>
 <aside class="hr-above" markdown="1">
 
 ## Tumblelog
