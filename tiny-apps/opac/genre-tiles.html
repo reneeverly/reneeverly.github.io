@@ -29,7 +29,7 @@ h4 { font-weight: normal; }
 </style>
 <style>
 @import url('https://fonts.googleapis.com/css2?family=Libre+Barcode+39+Text');
-.barcode { font-family: "Libre Barcode 39 Text", sans-serif; background: white; color: black; padding: 0.25em; /*position: absolute; top: 0px; right: 0px;*/  font-size: 1.5em; }
+.barcode { font-family: "Libre Barcode 39 Text", sans-serif; background: white; color: black; padding: 0.25em; /*position: absolute; top: 0px; right: 0px;*/  font-size: 1.25em; }
 </style>
 
 {% assign classes = site.data.bookshelf | group_by_exp: "item", "item.class1" %}
@@ -74,7 +74,7 @@ h4 { font-weight: normal; }
 {% else %}
 <p class="status checked-out">Checked Out</p>
 {% endif %}
-<span class="barcode">{{ book["IDtag"] }}</span>
+<span class="barcode">*{{ book["IDtag"] }}*</span>
 <p>
 {% if book.Description != nil %}
 {{ book.Description | escape }}
