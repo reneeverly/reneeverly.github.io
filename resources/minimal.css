@@ -15,3 +15,19 @@ img { max-width: 100%; }
 	html, body { background: #010101; color: #fffafa; }
 	a { color: #FF52AE; } /* WCAG AAA over #010101 */
 }
+
+/* Pop of Color Update (2025-12-11) */
+
+html { background: pink; }
+body { margin: 1em auto; border: 1pt solid #EA005A; border-radius: 0.5em; padding-bottom: 1em; }
+body > footer, body > header, .hr-above, article { border-color: #AE005A; border-width: 1pt; }
+
+@media screen and (prefers-color-scheme: dark) {
+	html { background: #421a4f; }
+	body { border-color: #ff52ae; }
+	body > footer, body > header, .hr-above, article { border-color: #FF52AE; }
+}
+
+@media screen and (max-width: 1024px) {
+	body { border-radius: 0em; margin: auto; }
+}
