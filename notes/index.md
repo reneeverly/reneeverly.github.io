@@ -14,3 +14,4 @@ A collection of notes I've taken that I refer to frequently or think might be us
 * [An Approach to Computing and Sustainability Inspired From Permaculture - Hundredrabbits](https://100r.co/site/computing_and_sustainability.html)
 * [Weathering Software Winter - Hundredrabbits](https://100r.co/site/weathering_software_winter.html)
 * [Blind SVG Study Guide](https://blindsvg.com/)
+* [This Page is Designed to Last](https://jeffhuang.com/designed_to_last/)
