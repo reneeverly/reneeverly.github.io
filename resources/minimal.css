@@ -6,6 +6,7 @@ header ul { margin: 0px; padding: 0px; list-style: none; display: inline-block; 
 header li { display: inline-block; margin-right: 0.5em; }
 body > footer { text-align: center; border-top: 1.5pt dashed #757575; padding-top: 1em; margin-top: 1em; }
 .hr-above, article { border-top: 1.5pt dashed #757575; margin-top: 0.5em; padding-top: 0.5em; }
+pre { white-space: pre-wrap; }
 
 body > main, body > section, body > article, body > aside { padding: 0.5em; }
 a { color: #AE005A; } /* WCAG AAA over #fffaf8 */
